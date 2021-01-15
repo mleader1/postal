@@ -28,6 +28,7 @@ gem 'gelf'
 gem 'moonrope'
 gem 'jwt'
 gem 'acme-client'
+gem 'socksify'
 gem 'highline', :require => false
 
 group :development, :assets do

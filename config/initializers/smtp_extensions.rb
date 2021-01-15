@@ -1,3 +1,5 @@
+require '/opt/postal/vendor/bundle/ruby/2.4.0/gems/socksify-1.7.1/lib/socksify'
+
 class Net::SMTP::Response
   def message
     @string
@@ -29,6 +31,10 @@ class Net::SMTP
   private
 
   def tcp_socket(address, port)
+    if ENV['PROXY_ENABLED'] == 'true'
+      TCPSocket::socks_server = "127.0.0.1"
+      TCPSocket::socks_port = 1080
+    end
     TCPSocket.open(address, port, self.source_address)
   end
 end
