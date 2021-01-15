@@ -28,10 +28,7 @@ gem 'gelf'
 gem 'moonrope'
 gem 'jwt'
 gem 'acme-client'
-<<<<<<< HEAD
 gem 'socksify'
-=======
->>>>>>> pullrequests/liara-cloud/routes_api
 gem 'highline', :require => false
 
 group :development, :assets do
