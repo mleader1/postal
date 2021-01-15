@@ -121,8 +121,4 @@ class DomainsInit < ApplicationController
       puts " * #{error}"
     end
   end
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> pullrequests/liara-cloud/routes_api

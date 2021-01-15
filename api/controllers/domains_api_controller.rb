@@ -105,19 +105,11 @@ controller :domains do
       domain = identity.server.domains.find_by_name(params.name)
       if domain.nil?
         error 'DomainNotFound'
-<<<<<<< HEAD
-      elsif domain.delete
-=======
       elsif domain.destroy
->>>>>>> pullrequests/liara-cloud/routes_api
         {:message => "Domain deleted successfully"}
       else
         error 'DomainNotDeleted'
       end
     end
   end
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> pullrequests/liara-cloud/routes_api
