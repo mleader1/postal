@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 require 'rails_helper'
+=======
+require './spec/rails_helper'
+>>>>>>> pullrequests/liara-cloud/routes_api
 require './spec/api/controllers/domains_init'
 
 
