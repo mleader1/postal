@@ -7,7 +7,7 @@ class AppMailer < ApplicationMailer
 
   def new_user(user)
     @user = user
-    mail :to => @user.email_address, :subject => "Welcome to Postal"
+    mail :to => @user.email_address, :subject => "Welcome to OElite Delivery Platform"
   end
 
   def user_invite(user_invite, organization)
