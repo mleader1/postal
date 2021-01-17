@@ -32,7 +32,7 @@ class Net::SMTP
 
   def tcp_socket(address, port)
     if ENV['PROXY_ENABLED'] == 'true' 
-      if address == ENV['PROXY_LOCAL_SMTP']
+      if (ENV['PROXY_LOCAL_SMTP'] || 'localhost').include? address
         log "Local SMTP #{address} identified. Bypass SMTP proxy."
       else
         TCPSocket::socks_server = "127.0.0.1"
